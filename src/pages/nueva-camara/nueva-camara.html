@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Nueva Camara</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form (ngSubmit)="guardarCamara()">
+    <ion-list>
+      <ion-item>
+        <ion-label stacked>Direccion ubicacion:</ion-label>
+        <ion-input type="text" placeholder="" [(ngModel)]="direccion" name="direccion"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Estado:</ion-label>
+        <ion-input type="text" placeholder="" [(ngModel)]="estado" name="estado"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Fase:</ion-label>
+        <ion-input type="number" placeholder="" [(ngModel)]="fase" name="fase"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Numero Matriz:</ion-label>
+        <ion-input type="text" placeholder="" [(ngModel)]="nmatriz" name="nmatriz"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Observacion:</ion-label>
+        <ion-input type="text" placeholder="" [(ngModel)]="observacion" name="observacion"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Tipo Camara:</ion-label>
+        <ion-input type="text" placeholder="" [(ngModel)]="tipocamara" name="tipocamara"></ion-input>
+      </ion-item>
+    </ion-list>
+    <div padding>
+      <button class="button" ion-button color="secondary" block type="submit"> <i class = "icon icon ion-happy-outline"></i>  Guardar</button>
+    </div>
+    
+  </form>
+</ion-content>

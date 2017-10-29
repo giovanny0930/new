@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-navbar color="secondary" align-title="center">
+    <ion-title align-title="center">
+      Sistema de Gestion CCTV
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    
+  <button class="button" ion-button color="assertive" (click)="nuevacamara()">
+      <i class = "icon icon ion-happy-outline"></i>
+      Adicionar Camara 
+    </button>
+  <ion-refresher (ionRefresh)="recargar_pagina($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-list reorder="true">
+    <ion-item-sliding *ngFor="let item of newsData; let i= index">
+      <ion-avatar item-start>
+      </ion-avatar>
+      <ion-item>
+        <p> {{item.direccionubicacion}}
+        </p>
+        <p>
+          {{item.estado}}
+        </p>
+        <p>
+          {{item.fase}}
+        </p>
+        <p>
+          {{item.nmatriz}}
+        </p>
+        <p>
+          {{item.observacion}}
+        </p>
+        <p>
+          {{item.tipocamara}}>
+
+        </p>
+      </ion-item>
+      <ion-item-options side="left">
+        <button ion-button color="secondary" (click)="editarCamara(item)">
+          <ion-icon name="md-create"></ion-icon>
+        </button>
+      </ion-item-options>
+      <ion-item-options side="right">
+        <button ion-button color="danger" (click)="borrarCamaras(item.nmatriz)">
+            <ion-icon name="trash"></ion-icon>
+            Borrar
+          </button>
+
+      </ion-item-options>
+
+    </ion-item-sliding>
+  </ion-list>
+  <!--- -->
+</ion-content>

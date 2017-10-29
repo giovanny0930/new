@@ -1,0 +1,16 @@
+<ion-content padding>
+  <img src='./assets/imagenes/img.jpg'/>
+  <ion-list>
+    <ion-item>
+      <ion-label>Usuario</ion-label>
+      <ion-input type="text" [(ngModel)]="usuario" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Contraseña</ion-label>
+      <ion-input color="secondary" type="contrasenia" [(ngModel)]="contrasenia"  required></ion-input>
+    </ion-item>
+    <button class="button" ion-button color="secondary"  block (click)="login()"> 
+        <i class = "icon ion-cloud"></i>Iniciar Sesión</button>
+  </ion-list>
+</ion-content>
